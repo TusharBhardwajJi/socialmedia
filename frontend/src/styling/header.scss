@@ -1,0 +1,46 @@
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 10vh;
+
+    a{
+        width: 2vmax;
+        height: 2vmax;
+        margin:1vmax 4vmax;
+
+        div{
+            svg{
+                color: #800080e3;
+            }
+            transition: all 0.1s ease-in;
+
+        }
+
+        svg{
+            font-size: 2vmax;
+            transition: all 0.2s;
+            color: grey;
+
+            &:hover{
+                color: rgb(195, 13, 195);
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 600px) {
+
+    .header a{
+        width: 8vw;
+        height: 8vw;
+
+        svg{
+            font-size: 8vw;
+        }
+    }
+    
+}
+
+// box-shadow: 0 3px 0px 0 #800080e3;

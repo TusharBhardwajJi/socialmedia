@@ -1,0 +1,73 @@
+.post{
+    width: 23rem;
+    
+    
+    background-color: rgb(132 127 127 / 10%);
+    border-radius: 5px;
+    box-shadow:0 0 10px rgba(45, 45, 45, 0.626) ;
+    padding: 0 1vmax 2vmax ;
+    margin: 2vmax;
+
+    img{
+        width: 100%;
+    }
+}
+
+.postHeader{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1vmax;
+
+}
+
+.postDetails{
+    display: flex;
+    align-items: center;
+    padding: 1vmax;
+
+    a{
+        text-decoration: none;
+        margin: 1vmax;
+    }
+
+    .avatar{
+        height: 2vmax;
+        width: 2vmax;
+    }
+}
+
+.postFooter{
+    margin-top: 10px;
+    button{
+        margin: 0 1vmax;
+        border-radius: 100%;
+        transition: all 0.3s;
+        background: none;
+        font-size: 20px;
+
+        &:hover{
+            font-size: 25px;
+            background: none;
+        }
+    }
+
+}
+
+.commentForm{
+    display: flex;
+
+}
+
+.commentDiv{
+    ::-webkit-scrollbar{
+        width: 5px;
+        color-scheme: purple;
+    }
+    ::-webkit-scrollbar-track{
+        background-color: grey;
+    }
+    ::-webkit-scrollbar-thumb{
+        background-color: purple;
+    }
+}

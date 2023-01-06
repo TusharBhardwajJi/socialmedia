@@ -1,0 +1,39 @@
+.commentHead{
+    position: relative;
+    img{
+        height: 3vmax;
+        width: 3vmax;
+        margin: 1vmax;
+        border-radius: 100%;
+        border: 3px solid rebeccapurple;
+    }
+    
+    a{
+        font-weight:500;
+        font-size: large;
+        display: flex;
+        align-items: center;
+        transition: all 0.2s; 
+
+        &:hover{
+            opacity: 0.9;
+        }
+        
+    }
+}
+
+.comment{
+    margin-top: 3px !important;
+    font-family:sans-serif;
+}
+
+
+.btn{
+    align-self: flex-end;
+    color: red;
+    &:hover{
+        color: rgb(135, 22, 22);
+        background: none !important;
+    }
+}
+

@@ -1,0 +1,55 @@
+.mainDiv{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+
+.mainDiv{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.avatarDiv{
+    box-sizing: border-box;
+}
+
+
+
+@media screen and (max-width : 548px){
+
+
+    .avatarDiv{
+        .img{
+            width: 80px; 
+            height: 80px ;
+        }
+    }
+    h2{
+        font-size: 20px;
+    }
+
+    .Fbtns {
+        button{
+            font-size: 10px;
+        }
+    }
+    
+}
+@media screen and (max-width : 380px){
+
+    .avatarDiv{
+        width: 80px !important;
+        .img{
+            width: 50px !important;
+            height: 50px !important;
+            margin-top: -67px !important;
+        }
+    }
+    .Fbtns{
+        margin-left: -50px !important;
+    }
+}
+

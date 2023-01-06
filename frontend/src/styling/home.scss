@@ -1,0 +1,92 @@
+::-webkit-scrollbar{
+    width: 5px;
+    color-scheme: purple;
+}
+::-webkit-scrollbar-track{
+    background-color: grey;
+}
+::-webkit-scrollbar-thumb{
+    background-color: purple;
+}
+
+.home{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 90vh;
+}
+.homeleft{
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2;
+    box-sizing: border-box;
+    background: #0000001f;
+}
+.homeright{
+    padding: 2vmax;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+.homeUser{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.2s;
+    margin: 20px;
+    
+    img{
+        height: 3vmax;
+        width: 3vmax;
+        margin: 1vmax;
+        border-radius: 100%;
+        border: 3px solid rgba(221, 11, 221, 0.349);
+    }
+    
+    &:hover{
+        background: rgba(200, 197, 197, 0.329);
+    }
+
+}
+
+.hr2{
+    display: none;
+}
+
+
+@media screen  and (max-width : 700px){
+    .hr1{
+        display: none;
+    }
+    .hr2{
+        display: unset;
+    }
+    .home{
+        grid-template-columns: 4fr 0fr;
+    }
+    .homeUser{
+        margin-right: 0;
+        margin-left: 0;
+        img{
+            width: 5vmax;
+            height: 5vmax;
+        }
+        
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
