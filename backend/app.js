@@ -19,16 +19,12 @@ app.use('/api/v1' , postroute);
 const userroute = require('./routes/user');
 app.use('/api/v1' , userroute);
 
-const newP = path.join(__dirname , '../frontend/build/index.html');
-console.log(newP);
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
-
-app.get('/*' , (req , res) => {
-    app.use(express.static(path.resolve(__dirname , '../frontend/build')));
-    res.sendFile(path.resolve(__dirname , '../frontend/build/index.html'))
-    console.log(__dirname);
-})
-
+/// All other GET requests not handled before will return our React app
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+});
 // localhost:4000/api/vi/post/upload  link is this type
 
 module.exports= app;
