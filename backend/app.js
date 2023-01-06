@@ -23,7 +23,7 @@ const newP = path.join(__dirname , '../frontend/build/index.html');
 console.log(newP);
 
 
-app.get('*' , (req , res) => {
+app.get('/*' , (req , res) => {
     app.use(express.static(newP));
     res.sendFile(path.resolve(newP))
     console.log(__dirname);
