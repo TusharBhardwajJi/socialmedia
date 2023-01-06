@@ -24,8 +24,8 @@ console.log(newP);
 
 
 app.get('/*' , (req , res) => {
-    app.use(express.static(newP));
-    res.sendFile(path.resolve(newP))
+    app.use(express.static(path.resolve(__dirname , '../frontend/build')));
+    res.sendFile(path.resolve(__dirname , '../frontend/build/index.html'))
     console.log(__dirname);
 })
 
