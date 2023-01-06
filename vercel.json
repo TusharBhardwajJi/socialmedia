@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "insta-nakli",
+  "name": "social media",
   "builds": [{ "src": "backend/server.js", "use": "@vercel/node" }],
   "routes": [{ "src": "/(.*)", "dest": "backend/server.js" }]
 }

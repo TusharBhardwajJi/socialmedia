@@ -12,16 +12,21 @@ app.use(express.urlencoded({limit : '50mb',extended:true}));
 
 app.use(cookieParser()); // auth (islogedin check krte hua jo hum token le rhe h oske liya)
 
+
 const postroute = require('./routes/post');
 app.use('/api/v1' , postroute);
 
 const userroute = require('./routes/user');
 app.use('/api/v1' , userroute);
 
+const newP = path.join(__dirname , '../frontend/build/index.html');
+console.log(newP);
 
-app.use(express.static(path.join(__dirname , '../frontend/build/index.html')));
+
 app.get('*' , (req , res) => {
-    res.sendFile(path.resolve(__dirname , '../frontend/build/index.html'))
+    app.use(express.static(newP));
+    res.sendFile(path.resolve(newP))
+    console.log(__dirname);
 })
 
 // localhost:4000/api/vi/post/upload  link is this type
